@@ -44,26 +44,29 @@
     max-width: 983px;
     width: 100%;
     margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex;
+    flex-wrap: wrap; */
     gap: 28px 14px;
     margin-bottom: 88px;
     justify-content: center;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
 
 .user {
     overflow: hidden;
-    max-width: 317px;
+    /* max-width: 317px; */
     width: 100%;
     position: relative;
 
 }
-.img__user {
+.user__img {
     transition: ease 0.5s;
     width: 100%;
 
 }
-.user:hover .img__user{
+.user:hover .user__img{
     transform: scale(1.1);
 }
 
@@ -108,11 +111,11 @@
 }
 
 @media (max-width: 767px) {
-    /* .user {
-        max-width: 500px;
-    } */
+    .users {
+        grid-template-columns: auto;
+    }
 
-    .user:hover .img__user{
+    .user:hover .user__img{
         transform: unset;
     }
 }
